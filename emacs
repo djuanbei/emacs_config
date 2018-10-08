@@ -931,5 +931,24 @@ FILENAME defaults to `buffer-file-name'."
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
 
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
+
+(org-babel-do-load-languages
+    'org-babel-load-languages
+    '(
+         (sh . t)
+         (python . t)
+         (R . t)
+         (ruby . t)
+         (ditaa . t)
+         (dot . t)
+         (octave . t)
+         (sqlite . t)
+         (perl . t)
+         (C . t)
+         ))
+;;  org-mode 8.0
+(setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f"
+                                 "xelatex -interaction nonstopmode %f"))
 
