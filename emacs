@@ -45,12 +45,10 @@
 (global-linum-mode t)
 (require 'hl-line) ;;high light current row
 
-
 (global-hl-line-mode t)
 
 (size-indication-mode t)                    ;; show file size (emacs 22+)
-(set-face-background 'hl-line "#3e4446") ;;Set any color as the background face of the current line:
-(set-face-foreground 'highlight nil) ;; keep syntax highlighting in the current line:
+
 
 
 
@@ -252,10 +250,10 @@
 (global-set-key [(meta insert)] 'h-insert-x-selection)
 (global-set-key  [(shift insert)] 'x-insert-selection)
 
-(define-key global-map (kbd "M-<left>") 'windmove-left)
-(define-key global-map (kbd "M-<right>") 'windmove-right)
-(define-key global-map (kbd "ESC <up>") 'windmove-up)
-(define-key global-map (kbd "ESC <down>") 'windmove-down)
+(define-key global-map (kbd "C-<left>") 'windmove-left)
+(define-key global-map (kbd "C-<right>") 'windmove-right)
+(define-key global-map (kbd "C-<up>") 'windmove-up)
+(define-key global-map (kbd "C-<down>") 'windmove-down)
 
 
 (global-set-key [f1] 'manual-entry )
